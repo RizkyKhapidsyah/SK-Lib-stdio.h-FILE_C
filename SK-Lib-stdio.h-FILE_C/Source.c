@@ -12,10 +12,11 @@ int main() {
         perror("Error opening file");
     } else {
         while (!feof(pFile)) {
-            if (fgets(buffer, 100, pFile) == NULL) break;
+            if (fgets(buffer, 100, pFile) == NULL) {
+                break;
+            }
             fputs(buffer, stdout);
         }
-
         fclose(pFile);
     }
 
